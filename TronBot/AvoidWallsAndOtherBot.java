@@ -28,6 +28,8 @@ class Player {
                 if(i == P) {
                     x = X1+1;
                     y = Y1+1;
+                } else {
+                    updateBoard(X1, Y1, P);
                 }
             }
 
@@ -36,10 +38,10 @@ class Player {
             System.err.println(x + " " + y);
             if(board[x-1][y]) {
                 System.out.println("LEFT");
-            } else if(board[x+1][y]) {
-                System.out.println("RIGHT");
             } else if(board[x][y+1]) {
                 System.out.println("DOWN");
+            } else if(board[x+1][y]) {
+                System.out.println("RIGHT");
             } else {
                 System.out.println("UP");
             }
